@@ -12,10 +12,11 @@ services:
     image: redis:6.0.5-alpine
     container_name: posthog_redis
   web:
-    image: posthog/posthog:release-1.24.0
+    image: posthog/posthog:release-1.36.0
     container_name: posthog_web
     ports:
       - 8000:8000
+      - 8001:8001
     environment:
       - IS_DOCKER=true
       - DATABASE_URL=postgres://posthog:posthog@db:5432/posthog
