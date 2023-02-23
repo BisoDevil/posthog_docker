@@ -12,7 +12,7 @@ services:
     image: redis:6.0.5-alpine
     container_name: posthog_redis
   web:
-    image: posthog/posthog:release-1.36.0
+    image: posthog/posthog:release-1.29.0
     container_name: posthog_web
     ports:
       - 8000:8000
